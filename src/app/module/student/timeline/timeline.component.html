@@ -1,0 +1,41 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<div class="timeline">
+  <div *ngFor='let p of postDetails'>
+  <div class="container left">
+    <div
+     class="content">
+     <span> {{p.pdate}}</span>
+      
+
+     <span>{{p.pText}}</span> 
+       
+      {{like}}
+
+    </div>
+    <!--like and comment-->
+  <div>
+
+       <span>{{p.slike.lcount}}</span>
+       <i (click)="add()" class="fa fa-thumbs-up"></i>&nbsp;&nbsp;
+      <i (click)="sub()" class="fa fa-thumbs-down"></i>&nbsp;&nbsp;&nbsp;
+  </div>
+  <div *ngFor='let c of p.scomment'>
+    <span> {{c.ctext}}</span>
+   
+  </div>
+  <div>
+    <input type="text" placeholder="Enter new Comment" [(ngModel)]="commentD.ctext">
+    <button (click)="addComment(p)" >Add</button>
+  </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

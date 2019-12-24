@@ -1,0 +1,15 @@
+{
+    "Student": 
+    {
+    "id":101,
+    "firstName":"Gaurav",
+	"lastName":"Phuse",
+	"email":"aaa@gmail.com",
+	"specialization":"developer",
+	"contact":1234567890,
+    "educationDetail":"cse",
+	"dob":"20/08/1992",
+	"type":"104",
+	"workLocation":"pune"
+    }
+}

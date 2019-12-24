@@ -1,0 +1,22 @@
+<p>
+  side-nav works!
+</p>
+<div class="sidebar-wrapper">
+  <div class="logo">
+      <a href="http://www.creative-tim.com" class="simple-text">
+          <div class="logo-img">
+              <img src="/assets/img/angular2-logo-white.png"/>
+          </div>
+          Creative Tim
+      </a>
+  </div>
+  <ul class="nav">
+    <li routerLinkActive="active" *ngFor="let menuItem of menuItems[0][role]" class="{{menuItem.class}} nav-item">
+      <!-- <img src="./assets/icons8-tags-50.png" width="20%">  -->
+      <a class="nav-link" [routerLink]="[role,menuItem.path]">
+            <!-- <i class="material-icons">{{menuItem.icon}}</i> -->
+            <p>{{menuItem.title}}</p>
+        </a>
+    </li>
+  </ul>
+  </div>
